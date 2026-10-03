@@ -1,0 +1,32 @@
+import '@testing-library/jest-dom';
+
+// Mock window.electronAPI for tests
+global.window.electronAPI = {
+  login: jest.fn(),
+  logout: jest.fn(),
+  checkAuth: jest.fn(),
+  getProducts: jest.fn(),
+  getProduct: jest.fn(),
+  searchProducts: jest.fn(),
+  getCategories: jest.fn(),
+  getCustomers: jest.fn(),
+  createCustomer: jest.fn(),
+  createOrder: jest.fn(),
+  getOrders: jest.fn(),
+  getOrder: jest.fn(),
+  startSync: jest.fn(),
+  getSyncStatus: jest.fn(),
+  getSyncHistory: jest.fn(),
+  dryRunSync: jest.fn(),
+  getSettings: jest.fn(),
+  updateSettings: jest.fn(),
+  getVersion: jest.fn(),
+  exportDb: jest.fn(),
+  importDb: jest.fn(),
+  resetDb: jest.fn(),
+  onSyncProgress: jest.fn(),
+  onSyncStatusChanged: jest.fn(),
+  onNavigate: jest.fn(),
+  onShowAbout: jest.fn(),
+  removeListener: jest.fn(),
+} as any;
